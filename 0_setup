@@ -1,0 +1,65 @@
+0_setup.md
+
+Region
+
+EU (London)
+OS & AMI - CentOS Linux 6 x86_64 HVM EBS 1602-74e73035-3435-48d6-88e0-89cc02ad83ee-ami-21e6d54b.3 (ami-ba373dde)
+
+Volume Space on Each Node
+
+	[root@ip-172-31-12-221 sysconfig]# df
+	Filesystem     1K-blocks    Used Available Use% Mounted on
+	/dev/xvda1       8124856 1066332   6639148  14% /
+	tmpfs            8165436       0   8165436   0% /dev/shm
+	[root@ip-172-31-12-221 sysconfig]#
+
+	[root@ip-172-31-15-105 sysconfig]# df
+	Filesystem     1K-blocks    Used Available Use% Mounted on
+	/dev/xvda1       8124856 1066736   6638744  14% /
+	tmpfs            8165436       0   8165436   0% /dev/shm
+	[root@ip-172-31-15-105 sysconfig]#
+
+	[root@ip-172-31-5-218 sysconfig]# df
+	Filesystem     1K-blocks    Used Available Use% Mounted on
+	/dev/xvda1       8124856 1065836   6639644  14% /
+	tmpfs            8165436       0   8165436   0% /dev/shm
+	[root@ip-172-31-5-218 sysconfig]#
+
+	[root@ip-172-31-11-246 sysconfig]# df
+	Filesystem     1K-blocks    Used Available Use% Mounted on
+	/dev/xvda1       8124856 1065984   6639496  14% /
+	tmpfs            8165436       0   8165436   0% /dev/shm
+	[root@ip-172-31-11-246 sysconfig]#
+
+	[root@ip-172-31-12-92 sysconfig]# df
+	Filesystem     1K-blocks    Used Available Use% Mounted on
+	/dev/xvda1       8124856 1066700   6638780  14% /
+	tmpfs            8165436       0   8165436   0% /dev/shm
+	[root@ip-172-31-12-92 sysconfig]#
+
+
+---------------- ********* --------------
+[root@ip-172-31-5-218 sysconfig]# yum repolist enabled
+Loaded plugins: fastestmirror, presto
+Loading mirror speeds from cached hostfile
+ * base: repo.uk.bigstepcloud.com
+ * extras: centos.serverspace.co.uk
+ * updates: mirror.vorboss.net
+base                                                     | 3.7 kB     00:00
+extras                                                   | 3.4 kB     00:00
+updates                                                  | 3.4 kB     00:00
+repo id                        repo name                                  status
+base                           CentOS-6 - Base                            6,696
+extras                         CentOS-6 - Extras                             62
+updates                        CentOS-6 - Updates                           603
+repolist: 7,361
+
+------------ ******* ------------
+
+Host IP's
+
+172.31.12.221   ip-172-31-12-221.eu-west-2.compute.internal
+172.31.5.218    ip-172-31-5-218.eu-west-2.compute.internal
+172.31.15.105   ip-172-31-15-105.eu-west-2.compute.internal
+172.31.12.92    ip-172-31-12-92.eu-west-2.compute.internal
+172.31.11.246   ip-172-31-11-246.eu-west-2.compute.internal
